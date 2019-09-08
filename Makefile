@@ -7,12 +7,8 @@ SOLUTION_PREFICS = _solution_output.json
 PYTHON = python
 
 DF = contest
-OF = hard_hard_couriers
 
-all: check
+all: test
 
 test:
-	$(PYTHON) main.py --data "$(DATA)" --output "$(OUTPUT_DIRECTIORY)"
-
-check:
-	$(PYTHON) check.py "$(DATA_DIRECTORY)$(DF)$(DATA_PREFICS)" "$(OUTPUT_DIRECTIORY)$(DF)$(SOLUTION_PREFICS)"
+	$(PYTHON) main.py --data "data/input/$(DF)_input.json" --output "$(OUTPUT_DIRECTIORY)"

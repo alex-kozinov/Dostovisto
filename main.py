@@ -30,9 +30,9 @@ def main():
     
     #make_result(simple_solution.simple_solution, d, args.output)                          #-> none
     #make_result(order_solution.order_solution, d, args.output)                            #-> 258676
-    #make_result(couriers_solution.couriers_solution, d, args.output)                      #-> 263240
+    make_result(couriers_solution.couriers_solution, d, args.output)                      #-> 263240
     #make_result(hard_couriers_solution.hard_couriers_solution, d, args.output)            #-> 266572
-    make_result(hard_hard_couriers_solution.hard_hard_couriers_solution, d, args.output)   #-> 270566 --- WIN
+    #make_result(hard_hard_couriers_solution.hard_hard_couriers_solution, d, args.output)   #-> 270566 --- WIN
 
 
 def state_test():
