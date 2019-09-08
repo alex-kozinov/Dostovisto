@@ -6,13 +6,13 @@ SOLUTION_PREFICS = _solution_output.json
 
 PYTHON = python
 
-DF = readme
-OF = order
+DATA = readme
+OUTF = order
 
-all: test check
+all: check
 
 test:
-	$(PYTHON) main.py --data "$(DATA_DIRECTORY)$(DF)$(DATA_PREFICS)" --output "$(OUTPUT_DIRECTIORY)"
+	$(PYTHON) main.py --data "$(DATA)" --output "$(OUTPUT_DIRECTIORY)"
 
 check:
-	$(PYTHON) check.py "$(DATA_DIRECTORY)$(DF)$(DATA_PREFICS)" "$(OUTPUT_DIRECTIORY)$(OF)$(SOLUTION_PREFICS)"
+	$(PYTHON) check.py "$(DATA)" "$(OUTF)"

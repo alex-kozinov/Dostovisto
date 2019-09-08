@@ -124,7 +124,6 @@ class State(object):
         for order in self.orders:
             self.free_orders.append(order)
 
-
     def energy(self):
         """
         Aggregates all salaries and profits and returns the substraction.
@@ -146,7 +145,7 @@ class State(object):
                 return self.max_money
             salary += 2 * (end_time - START_TIME)
 
-        return self.max_money - profit + salary
+        return self.max_money - profit / 2 + salary
 
     def get_neighbour(self):
         new_state = copy(self)
@@ -173,9 +172,9 @@ class State(object):
 
     def add_order(self):
         courier = self.couriers[randint(0, len(self.couriers) - 1)]
-        if len(self.free_orders) < 1:
+        if len(self.free_orders) == 0:
             return False
-        
+
         delete_index = randint(0, len(self.free_orders) - 1)
         new_order = self.free_orders[delete_index]
         pick_event = Event(courier, 'pickup', new_order, new_order.pickup_point)
@@ -205,6 +204,7 @@ class State(object):
         order2delete = path[delete_pos].order
 
         path = [event for event in path if event.action == 'start' or event.order.id != order2delete.id]
+        self.paths[courier.id] = path
 
         self.free_orders.append(order2delete)
         return True
