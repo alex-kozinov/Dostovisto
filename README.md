@@ -36,14 +36,14 @@ PYTHON - интерпритатор питона
 
 ### Запускаем:
 
-По умолчанию мы запускаем решение hard_hard_curier, на данных contest. 
+По умолчанию мы запускаем решение hard_hard_couriers, на данных contest. 
 
-Можно запустить, например, решение hard_curier на тесте simple
+Можно запустить, например, решение hard_couriers на тесте simple
 
 Для этого надо запустить:
 
-make DF=simple OF=hard_curier
+make DF=simple OF=hard_couriers
 
 В таком случае выход программы пересчитается. Что бы натравить скрипт check.py на выход программы, можно запустить
 
-make check DF=simple OF=hard_curier
+make check DF=simple OF=hard_couriers
