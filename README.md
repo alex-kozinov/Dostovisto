@@ -1,2 +1,3 @@
-# Dostovisto
-diversity.hack
+# Dostavisto
+
+Hasta la vista!
