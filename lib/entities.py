@@ -3,7 +3,7 @@
 import json
 from random import randint
 from copy import copy
-from scipy.stats import rv_discrete
+#from scipy.stats import rv_discrete
 
 START_TIME = 360
 PAYMENT_COURIER = 2

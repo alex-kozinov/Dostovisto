@@ -43,7 +43,7 @@ def best_courier(couriers, orders, avalibales_couriers, avalibales_orders) :
         if avalibales_couriers[i] == False:
             continue
 
-        courier_point = Point(couriers[i].point.id, couriers[i].point.x, couriers[i].point.y)
+        courier_point = PointTime(couriers[i].point.id, couriers[i].point.x, couriers[i].point.y)
         courier_time = couriers[i].time
         
         new_many = 0
@@ -118,7 +118,7 @@ def hard_hard_couriers_solution(dataset) :
 
         finish_time = courier.can_deliver(order)
         
-        many = courier.Profit(order)
+        many = courier.profit(order)
         sum_many += many
         print("best = ", best_id, "many = ", many, "sum_many = ", sum_many)
 
